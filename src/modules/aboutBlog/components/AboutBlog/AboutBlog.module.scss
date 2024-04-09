@@ -1,0 +1,96 @@
+.section {
+  padding: 48px 0;
+  @include media(tablet) {
+    padding: 68px 0;
+  }
+  @include media(desktop) {
+    padding: 100px 0;
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.blogContent {
+  @include media(desktop) {
+    display: flex;
+    gap: 64px;
+  }
+}
+
+.list {
+  margin-bottom: 48px;
+  @include media(tablet) {
+    display: flex;
+    gap: 24px;
+  }
+  @include media(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.listItem {
+  .image {
+    @include media(tablet) {
+      max-width: 340px;
+    }
+    @include media(desktop) {
+      min-width: 310px;
+    }
+  }
+}
+.listItem:nth-child(2) {
+  display: none;
+  @include media(tablet) {
+    display: block;
+  }
+}
+
+.text {
+  text-align: justify;
+  margin-bottom: 32px;
+  font-weight: 500;
+  @include font(20, 28);
+  color: $primary-text-color;
+  @include media(tablet) {
+    text-shadow: none;
+    @include font(24, 32);
+    max-width: 704px;
+  }
+  @include media(desktop) {
+    max-width: 604px;
+    margin-bottom: 0;
+  }
+}
+
+.cardTitle {
+  font-weight: 500;
+  @include font(20, 28);
+  color: $primary-text-color;
+  margin-top: 16px;
+  @include media(tablet) {
+    max-width: 340px;
+    @include font(24, 32);
+    margin-top: 24px;
+  }
+  @include media(desktop) {
+    max-width: 310px;
+  }
+}
+
+.buttonLink {
+  @include media(tablet) {
+    margin-left: auto;
+  }
+  @include media(desktop) {
+    position: absolute;
+    right: calc(64px + 644px + 64px);
+    top: 370px;
+  }
+}
+.buttonLink:hover,
+.buttonLink:focus,
+.buttonLink:active {
+  background-color: $pet-color;
+}

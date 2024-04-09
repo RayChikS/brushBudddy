@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  // justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  height: 256px;
+  overflow-y: hidden;
+  @include media(tablet) {
+    height: 460px;
+    margin-bottom: 48px;
+  }
+  @include media(desktop) {
+    height: 580px;
+    margin-right: 64px;
+  }
+}
+
+.imagesSwiperWrapper {
+  width: 54px;
+  padding: 2px;
+  @include media(tablet) {
+    width: 99px;
+  }
+  @include media(desktop) {
+    margin-right: 24px;
+    width: 129px;
+  }
+}
+
+.slideBtn {
+  margin: 0;
+  border: 1px solid rgba(31, 31, 31, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  border-radius: 8px;
+  width: 100%;
+  height: 52px;
+
+  @include media(tablet) {
+    border-radius: 24px;
+    height: 97px;
+  }
+
+  @include media(desktop) {
+    height: 127px;
+  }
+
+  &.focused {
+    border: 1px solid rgba(31, 31, 31, 0.7);
+  }
+}
+
+.slideImage {
+  height: 100%;
+  width: auto;
+}
+
+.imgContainer {
+  border: 1px solid rgba(31, 31, 31, 0.15);
+  border-radius: 24px;
+  width: 275px;
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  @include media(tablet) {
+    width: 575px;
+    height: 460px;
+  }
+  @include media(desktop) {
+    width: 493px;
+    height: 580px;
+  }
+}
+
+.largeImage {
+  height: 100%;
+  width: auto;
+}

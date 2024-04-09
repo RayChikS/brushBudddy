@@ -1,0 +1,8 @@
+.title {
+  font-weight: 900;
+
+  @include font(36, 44);
+  @include media(tablet) {
+    @include font(48, 56);
+  }
+}

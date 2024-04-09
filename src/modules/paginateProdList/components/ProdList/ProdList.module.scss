@@ -1,0 +1,9 @@
+.prodList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  @include media(desktop) {
+    width: 948px;
+  }
+}

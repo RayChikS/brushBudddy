@@ -1,0 +1,40 @@
+.footer {
+  font-size: 40px;
+  width: 100%;
+  text-align: left;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  background-color: $main-bg-color;
+}
+
+.middleOfFooter {
+  width: 343px;
+
+  @include media(tablet) {
+    width: 533px;
+  }
+}
+
+.topOfFooter {
+  display: flex;
+  flex-direction: column;
+
+  @include media(tablet) {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include media(desktop) {
+    width: 715px;
+    margin-bottom: 64px;
+  }
+}
+
+.twoBlocks {
+  @include media(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

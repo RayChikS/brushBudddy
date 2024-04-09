@@ -1,0 +1,20 @@
+.about {
+  color: $secondary-text-color;
+  display: flex;
+  @include font(16, 24);
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.name::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  background-color: $disabled-bg-color;
+  border-radius: 10px;
+  height: 16px;
+  margin: 0 16px;
+}

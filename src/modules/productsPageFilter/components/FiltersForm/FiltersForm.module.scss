@@ -1,0 +1,239 @@
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @include media(desktop) {
+    padding: 32px;
+    gap: 40px;
+    flex-shrink: 0;
+    height: auto;
+  }
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
+  overflow-y: scroll;
+  position: static;
+  z-index: 0;
+  @include media(tablet) {
+    gap: 24px;
+    padding: 24px 32px 0px 32px;
+    justify-content: flex-start;
+    height: 728px;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  @include media(desktop) {
+    padding: 0;
+    gap: 24px;
+    height: auto;
+    overflow-y: visible;
+    position: static;
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 32px;
+  gap: 8px;
+  align-self: stretch;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  position: static;
+  z-index: 1;
+  bottom: 0;
+  background-color: #fff;
+  @include media(tablet) {
+    gap: 24px;
+    padding: 32px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  @include media(desktop) {
+    border-top: none;
+    background-color: transparent;
+    @include media(desktop) {
+      padding: 0;
+    }
+  }
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+.inputContainer:last-child {
+  margin-bottom: 64px;
+  @include media(desktop) {
+    margin-bottom: 0;
+  }
+}
+.label {
+  display: flex;
+  padding-bottom: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $secondary-text-color;
+  font-style: normal;
+  font-weight: 500;
+  @include font(16, 24);
+}
+.input {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  background-color: transparent;
+  outline: none;
+  @include media(desktop) {
+    border: none;
+    background-color: $light-color;
+    padding-left: 40px;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  @include media(to-desktop) {
+    display: none;
+  }
+}
+.input::placeholder {
+  position: absolute;
+  color: $disabled-content-color;
+  left: 40px;
+  @include media(to-desktop) {
+    left: 12px;
+  }
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  position: relative;
+}
+.checkboxLabel {
+  display: flex;
+  padding-left: 28px;
+}
+.check_input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.check_box {
+  position: absolute;
+  margin-left: -28px;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid $disabled-content-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media(desktop) {
+    border: none;
+    background-color: $light-color;
+  }
+}
+
+.check_input:checked + .check_box {
+  border: none;
+}
+.check_input.adult:checked + .check_box {
+  background-color: $adult-color;
+}
+.check_input.child:checked + .check_box {
+  background-color: $child-color;
+}
+.check_input.animal:checked + .check_box {
+  background-color: $pet-color;
+}
+.checkIcon {
+  width: 10px;
+  height: 9.52px;
+  fill: $light-color;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #49494a;
+  @include font(16, 24);
+  font-style: normal;
+  font-weight: 500;
+}
+.resetBtn {
+  display: flex;
+  height: 48px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border: 1px solid rgba(31, 31, 31, 0.1);
+  font-style: normal;
+  font-weight: 500;
+  @include font(16, 24);
+  @include media(desktop) {
+    display: none;
+  }
+}
+.resetBtn:is(:hover),
+.submitBtn:is(:hover) {
+  border-color: transparent;
+  background-color: #f5516f;
+  outline: none;
+}
+
+.submitBtn {
+  display: flex;
+  height: 48px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border: none;
+  background-color: $pet-color;
+  color: $light-color;
+  @include font(16, 24);
+
+  @include media(desktop) {
+    width: auto;
+  }
+}
+
+.bottom {
+}

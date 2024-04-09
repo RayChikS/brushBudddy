@@ -1,0 +1,11 @@
+.block {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+    @include media(tablet) {
+      margin-bottom: 24px;
+    }
+    @include media(desktop) {
+      margin-bottom: 32px;
+    }
+  }
+}
